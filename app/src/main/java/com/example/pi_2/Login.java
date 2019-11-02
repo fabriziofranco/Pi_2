@@ -63,11 +63,10 @@ public class Login extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         //TODO
                         try {
-                                Intent intent = new Intent(getActivity(), Menu.class);
+                                Intent intent = new Intent(getActivity(), MenuActivity.class);
                                 intent.putExtra("user_id", response.getInt("user_id"));
                                 intent.putExtra("username", response.getString("username"));
                                 startActivity(intent);
-                                showMessage("Bienvenido");
 
                         }
                         catch (Exception e) {
