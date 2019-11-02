@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#293462"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="30dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/papel"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@null"
+                android:layout_marginTop="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cycle"> </ImageButton>
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:textSize="25sp"
+                android:text="\nÚnete a Circular®\n"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <EditText
+                android:id="@+id/r_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFC312"
+                android:ems="15"
+                android:hint="Ingresa tu usuario"
+                android:textAlignment="center"
+                android:textColorHint="#79FFC312"
+                android:textColor="#FFC312" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/r_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Ingresa tu email"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFC312"
+                android:textColorHint="#79FFC312"
+                android:textAlignment="center"
+                android:backgroundTint="#FFC312"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/r_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Ingresa tu nombre"
+                android:textColor="#FFC312"
+                android:textColorHint="#79FFC312"
+                android:textAlignment="center"
+                android:backgroundTint="#FFC312"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/r_Apellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Ingresa tu apellido"
+                android:inputType="text"
+                android:textColor="#FFC312"
+                android:textColorHint="#79FFC312"
+                android:textAlignment="center"
+                android:backgroundTint="#FFC312"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp">
+
+            <EditText
+                android:id="@+id/r_Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Ingresa tu contraseña"
+                android:inputType="textPassword"
+                android:textColor="#FFC312"
+                android:textColorHint="#79FFC312"
+                android:textAlignment="center"
+                android:backgroundTint="#FFC312"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_buttons"
+                android:text="Registrarme"
+                android:onClick="Registrarse"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
