@@ -71,7 +71,7 @@ public class Login extends AppCompatActivity {
                         }
                         catch (Exception e) {
                             e.printStackTrace();
-                            showMessage(e.getMessage());
+                            showMessage("Contraseña incorrecta");
                         }
                     }
                 },
@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
                             showMessage("Contraseña incorrecta");
                         }
                         else {
-                            showMessage(error.getMessage());
+                            showMessage("Contraseña incorrecta");
                         }
                     }
                 }

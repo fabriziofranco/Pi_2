@@ -45,8 +45,7 @@ public class HomeFragment extends Fragment {
     public void showMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
-
-
+    
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -77,10 +76,8 @@ public class HomeFragment extends Fragment {
                             mAdapter = new HomeAdapter(data_global, getActivity());
                             mRecyclerView.setAdapter(mAdapter);
                             mAdapter.notifyDataSetChanged();
-                            showMessage("Se logro");
                         }catch (JSONException e) {
                             e.printStackTrace();
-                            showMessage("Error de JSON");
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -88,7 +85,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // TODO: Handle error
-                showMessage("LLegue a error");
                 error.printStackTrace();
             }
         });

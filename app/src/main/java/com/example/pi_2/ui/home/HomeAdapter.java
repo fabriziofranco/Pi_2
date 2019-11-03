@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pi_2.MainActivity;
+import com.example.pi_2.Producto;
 import com.example.pi_2.R;
 
 import org.json.JSONArray;
@@ -51,14 +52,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         try {
             JSONObject element = elements.getJSONObject(position);
             String name = element.getString("name");
-            //final String id = element.getString("id");
+            final String id = element.getString("id");
             holder.first_line.setText(name);
             holder.container.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    //Intent intent = new Intent(context, MainActivity.class);
-                    ///intent.putExtra("category_id",1);
-                    //context.startActivity(intent);
+                    Intent intent = new Intent(context, Producto.class);
+                    intent.putExtra("product_id",id);
+                    context.startActivity(intent);
                 }
             });
         } catch (JSONException e) {

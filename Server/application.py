@@ -360,8 +360,19 @@ def get_products():
     data = []
     for p in dbResponse:
         data.append(p)
-    message={'data':data}
+    message = {'data': data}
     return Response(json.dumps(message, cls=connector.AlchemyEncoder), mimetype='application/json')
+
+
+@app.route('/product_by_id/<id>', methods = ['GET'])
+def get_product_by_id(id):
+    session = db.getSession(engine)
+    product = session.query(entities.Product).filter(entities.Product.id == id).one()
+    js = json.dumps({'name': product.name, 'description': product.description}, cls=connector.AlchemyEncoder)
+    return Response(js, status=200, mimetype='application/json')
+
+
+
 
 
 ##############################################
