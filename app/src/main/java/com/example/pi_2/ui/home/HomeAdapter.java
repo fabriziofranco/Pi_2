@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pi_2.MainActivity;
 import com.example.pi_2.R;
 
 import org.json.JSONArray;
@@ -55,9 +56,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             holder.container.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    //Intent intent = new Intent(context,Category_questions.class);
-                    //intent.putExtra("category_id",id);
-                    //context.startActivity(intent);
+                    Intent intent = new Intent(context, MainActivity.class);
+                    intent.putExtra("category_id",1);
+                    context.startActivity(intent);
                 }
             });
         } catch (JSONException e) {
@@ -67,6 +68,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return elements.length();
+        if(elements!=null)
+            return elements.length();
+        else
+            return 0;
     }
 }

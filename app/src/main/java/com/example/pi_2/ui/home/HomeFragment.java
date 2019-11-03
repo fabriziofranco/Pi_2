@@ -34,11 +34,13 @@ import com.example.pi_2.R;
 
 public class HomeFragment extends Fragment {
 
+
+    private View root;
     RecyclerView mRecyclerView;
+
     RecyclerView.Adapter mAdapter;
-    Context mContext;
-    Activity mActivity;
-    View root_global;
+    JSONArray data_global;
+
     public void showMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
@@ -48,32 +50,14 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
+        root = inflater.inflate(R.layout.fragment_home, container, false);
         mRecyclerView = root.findViewById(R.id.main_recycler_view);
-        return root;
-    }
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        getProducts();
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mContext = context;
-        mActivity= getActivity();
-    }
-
-    public void getProducts(){
         String url = "http://10.0.2.2:8080/products";
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
-        RequestQueue queue = Volley.newRequestQueue(mContext);
+        RequestQueue queue = Volley.newRequestQueue(getContext());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
@@ -82,9 +66,7 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray data = response.getJSONArray("data");
-                            mAdapter = new HomeAdapter(data, getActivity());
-                            mRecyclerView.setAdapter(mAdapter);
+                            data_global = response.getJSONArray("data");
                             showMessage("Se logro");
                         }catch (JSONException e) {
                             e.printStackTrace();
@@ -100,6 +82,19 @@ public class HomeFragment extends Fragment {
             }
         });
         queue.add(jsonObjectRequest);
+        mAdapter = new HomeAdapter(data_global, getActivity());
+        mRecyclerView.setAdapter(mAdapter);
+
+
+
+
+
+        return root;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+    }
 }
