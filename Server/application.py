@@ -148,32 +148,32 @@ def create_test_products():
     product1 = entities.Product(description="Marca Asus", name="Laptop de 32 gb de Ram "
                                                                "15 pulgadas "
                                                                "intel core i9" 
-                                                               "Disco duro sÛlido 1TB "
-                                                               "Usada 1 aÒo", owner_id=1, category_id=1)
+                                                               "Disco duro solido 1TB "
+                                                               "Usada 1 a√±o", owner_id=1, category_id=1)
 
     product2 = entities.Product(description="Marca Zara", name="Pantalon negro talla 32 "
                                                                "Coleccion Invierno 2017 "
-                                                               "Con unos pequeÒos rasguÒos"
-                                                               "Usada 1 aÒo", owner_id=1, category_id=1)
+                                                               "Con unos peque√±os rasgu√±os"
+                                                               "Usada 1 a√±o", owner_id=1, category_id=1)
 
     product3 = entities.Product(description="Marca Zara", name="Zapatos negros talla 9"
                                                                "Zapatos para hombre"
                                                                "Apariencia 8/10"
-                                                               "Usada 1 aÒo", owner_id=1, category_id=1)
+                                                               "Usada 1 a√±o", owner_id=1, category_id=1)
 
     product4 = entities.Product(description="Marca Emporio Armani", name="Lentes azules"
-                                                                         "Con pequeÒos rayones"
-                                                                         "ColecciÛn verano 2018"
+                                                                         "Con peque√±os rayones"
+                                                                         "Colecci√±n verano 2018"
                                                                          "Estado 7/10"
-                                                                         "Usados 1 aÒo", owner_id=1, category_id=1)
+                                                                         "Usados 1 a√±o", owner_id=1, category_id=1)
 
     product5 = entities.Product(description="Marca Casa Ideas", name="Conjunto de muebles"
-                                                                     "Muebles de color marrÛn"
-                                                                     "Algunos muebles presentan araÒones"
+                                                                     "Muebles de color marr√±n"
+                                                                     "Algunos muebles presentan ara√±ones"
                                                                      "Apariencia 7/10"
-                                                                     "Usado 2 aÒos", owner_id=1, category_id=1)
+                                                                     "Usado 2 a√±os", owner_id=1, category_id=1)
     
-    product6 = entities.Product(description="Marca Nike", name="Camiseta de f˙tbol "
+    product6 = entities.Product(description="Marca Nike", name="Camiseta de f√±tbol "
                                                                "Equipo PSG"
                                                                "Neymar 10"
                                                                "Temporada 2018-2019 "
@@ -187,13 +187,13 @@ def create_test_products():
 
     product8 = entities.Product(description="Marca Toyota", name="Corolla 2015"
                                                                  "Color negro"
-                                                                 "Mec·nico"
-                                                                 "Radio de f·brica"
+                                                                 "Mec√±nico"
+                                                                 "Radio de f√±brica"
                                                                  "12 000 km", owner_id=1, category_id=1)
 
     product9 = entities.Product(description="Marca Ford", name="Mustang 2018"
                                                                "Color Amarillo"
-                                                               "Autom·tico"
+                                                               "Autom√±tico"
                                                                "Estado 10/10"
                                                                "10 000 km", owner_id=1, category_id=1)
 
@@ -240,7 +240,7 @@ def create_test_products():
     product17 = entities.Product(description="Marca Tech21", name="Case Iphone XS Max "
                                                                   "Color negro"
                                                                   "Estado 6/10"
-                                                                  "Usado 1 aÒo", owner_id=1, category_id=1)
+                                                                  "Usado 1 a√±o", owner_id=1, category_id=1)
 
     product18 = entities.Product(description="Marca Ray-Ban", name="Lentes de Sol "
                                                                    "Color negro"
@@ -251,22 +251,22 @@ def create_test_products():
     product19 = entities.Product(description="Marca Huawei", name="Laptop 13 pulgadas"
                                                                   "16 gb ram"
                                                                   "500 gb de almacenamiento"
-                                                                  "T·ctil"
+                                                                  "T√±ctil"
                                                                   "Usada 2 meses", owner_id=1, category_id=1)
 
     product20 = entities.Product(description="Marca Apple", name="Iphone XS Max "
                                                                  "Negro"
                                                                  "256 gb"
-                                                                 "Cero rasguÒos"
+                                                                 "Cero rasgu√±os"
                                                                  "Estado 9/10"
                                                                  "Usado 10 meses", owner_id=1, category_id=1)
 
     product21 = entities.Product(description="Marca Apple", name="Ipad"
                                                                  "4 gb ram"
                                                                  "Color blanco"
-                                                                 "Camara daÒada"
+                                                                 "Camara da√±ada"
                                                                  "Estado 5/10"
-                                                                 "Usado 1 aÒo", owner_id=1, category_id=1)
+                                                                 "Usado 1 a√±o", owner_id=1, category_id=1)
 
     product22 = entities.Product(description="Marca Samsung", name="Reloj "
                                                                    "Color negro"
@@ -277,14 +277,14 @@ def create_test_products():
     product23 = entities.Product(description="Marca Nike", name="Canilleras Futbol"
                                                                 "Estado 3/10"
                                                                 "Color rojo"
-                                                                "Tienen AraÒones"
-                                                                "Usada 3 aÒos", owner_id=1, category_id=1)
+                                                                "Tienen Ara√±ones"
+                                                                "Usada 3 a√±os", owner_id=1, category_id=1)
 
     product24 = entities.Product(description="Marca Samsung", name="Smart Tv "
                                                                    "50 pulgadas"
                                                                    "3D + lentes"
                                                                    "Estado 9/10"
-                                                                   "Usada 1 aÒo", owner_id=1, category_id=1)
+                                                                   "Usada 1 a√±o", owner_id=1, category_id=1)
 
     product25 = entities.Product(description="Marca Apple", name="Laptop "
                                                                  "32 gb ram"
@@ -292,7 +292,7 @@ def create_test_products():
                                                                  "1 tb de almacenamiento"
                                                                  "Intel core i7"
                                                                  "Estado 8/10"
-                                                                 "Usada 1 aÒo", owner_id=1, category_id=1)
+                                                                 "Usada 1 a√±o", owner_id=1, category_id=1)
 
     product26 = entities.Product(description="Marca Apple", name="Airpods "
                                                                  "Primera generacion"
