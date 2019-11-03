@@ -353,14 +353,15 @@ def get_users():
         data.append(user)
     return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
 
-@app.route('/products', methods=['GET'])
+@app.route('/products', methods = ['GET'])
 def get_products():
     session = db.getSession(engine)
     dbResponse = session.query(entities.Product)
     data = []
-    for user in dbResponse:
-        data.append(user)
-    return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
+    for p in dbResponse:
+        data.append(p)
+    message={'data':data}
+    return Response(json.dumps(message, cls=connector.AlchemyEncoder), mimetype='application/json')
 
 
 ##############################################

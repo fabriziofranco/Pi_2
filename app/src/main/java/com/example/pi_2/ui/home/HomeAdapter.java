@@ -29,7 +29,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView first_line, second_line;
+        TextView first_line;
         RelativeLayout container;
 
         public ViewHolder(View itemView) {
@@ -42,7 +42,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @NonNull
     @Override
     public HomeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_view,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_view,parent, true);
         return new ViewHolder(view);
     }
 
@@ -56,9 +56,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             holder.container.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, MainActivity.class);
-                    intent.putExtra("category_id",1);
-                    context.startActivity(intent);
+                    //Intent intent = new Intent(context, MainActivity.class);
+                    ///intent.putExtra("category_id",1);
+                    //context.startActivity(intent);
                 }
             });
         } catch (JSONException e) {

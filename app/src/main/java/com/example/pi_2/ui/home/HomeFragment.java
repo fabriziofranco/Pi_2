@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,11 +54,17 @@ public class HomeFragment extends Fragment {
         homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
         root = inflater.inflate(R.layout.fragment_home, container, false);
         mRecyclerView = root.findViewById(R.id.main_recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mAdapter = new HomeAdapter(data_global, getActivity());
+        mRecyclerView.setAdapter(mAdapter);
+        return root;
+    }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
         String url = "http://10.0.2.2:8080/products";
-        RequestQueue queue = Volley.newRequestQueue(getContext());
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
@@ -67,6 +74,7 @@ public class HomeFragment extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             data_global = response.getJSONArray("data");
+                            mAdapter.notifyDataSetChanged();
                             showMessage("Se logro");
                         }catch (JSONException e) {
                             e.printStackTrace();
@@ -78,23 +86,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // TODO: Handle error
+                showMessage("LLegue a error");
                 error.printStackTrace();
             }
         });
         queue.add(jsonObjectRequest);
-        mAdapter = new HomeAdapter(data_global, getActivity());
-        mRecyclerView.setAdapter(mAdapter);
-
-
-
-
-
-        return root;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
     }
 }
