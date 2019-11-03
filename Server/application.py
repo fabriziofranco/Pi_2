@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 ##############################################
 #                                            #
-#                 FAKE USERS                 #
+#              FAKE INFORMATION              #
 #                                            #
 ##############################################
 
@@ -139,6 +139,55 @@ def create_test_users():
     db_session.add(user15)
     db_session.commit()
     return "Usuarios creados!"
+
+
+@app.route('/create_fake_products', methods=['GET'])
+def create_test_products():
+    db_session = db.getSession(engine)
+    product1 = entities.Product(description="Marca Asus", name="Laptop Usada 1 año", owner_id=1, category_id=1)
+
+    product2 = entities.Product(description="Marca Asus", name="Libro Usada 1 año", owner_id=1, category_id=1)
+
+    product3 = entities.Product(description="Marca Asus", name="Zapatos Usada 1 año", owner_id=1, category_id=1)
+
+    product4 = entities.Product(description="Marca Asus", name="Lentes Usada 1 año", owner_id=1, category_id=1)
+
+    product5 = entities.Product(description="Marca Asus", name="Colonia Usada 1 año", owner_id=1, category_id=1)
+    
+    product6 =entities.Product(description="Marca Asus", name="Celular Usada 1 año", owner_id=1, category_id=1)
+
+    product7 = entities.Product(description="Marca Asus", name="Adorno Usada 1 año", owner_id=1, category_id=1)
+
+    product8 = entities.Product(description="Marca Asus", name="Stewart Usada 1 año", owner_id=1, category_id=1)
+
+    product9 = entities.Product(description="Marca Asus", name="Bolsa Usada 1 año", owner_id=1, category_id=1)
+
+    product10 = entities.Product(description="Marca Asus", name="Linterna Usada 1 año", owner_id=1, category_id=1)
+
+    product11 = entities.Product(description="Marca Asus", name="Teclado Usada 1 año", owner_id=1, category_id=1)
+    
+    product12 = entities.Product(description="Marca Asus", name="Piano Usada 1 año", owner_id=1, category_id=1)
+
+    product13 = entities.Product(description="Marca Asus", name="Cuadro Usada 1 año", owner_id=1, category_id=1)
+    
+    product14 = entities.Product(description="Marca Asus", name="Tv Usada 1 año", owner_id=1, category_id=1)
+
+    db_session.add(product1)
+    db_session.add(product2)
+    db_session.add(product3)
+    db_session.add(product4)
+    db_session.add(product5)
+    db_session.add(product6)
+    db_session.add(product7)
+    db_session.add(product8)
+    db_session.add(product9)
+    db_session.add(product10)
+    db_session.add(product11)
+    db_session.add(product12)
+    db_session.add(product13)
+    db_session.add(product14)
+    db_session.commit()
+    return "Productos creados!"
 
 
 ##############################################
@@ -299,6 +348,15 @@ def get_questions():
 def get_users():
     session = db.getSession(engine)
     dbResponse = session.query(entities.User)
+    data = []
+    for user in dbResponse:
+        data.append(user)
+    return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
+
+@app.route('/products', methods=['GET'])
+def get_products():
+    session = db.getSession(engine)
+    dbResponse = session.query(entities.Product)
     data = []
     for user in dbResponse:
         data.append(user)
