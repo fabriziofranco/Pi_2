@@ -74,6 +74,8 @@ public class HomeFragment extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             data_global = response.getJSONArray("data");
+                            mAdapter = new HomeAdapter(data_global, getActivity());
+                            mRecyclerView.setAdapter(mAdapter);
                             mAdapter.notifyDataSetChanged();
                             showMessage("Se logro");
                         }catch (JSONException e) {
