@@ -144,33 +144,68 @@ def create_test_users():
 @app.route('/create_fake_products', methods=['GET'])
 def create_test_products():
     db_session = db.getSession(engine)
+
     product1 = entities.Product(description="Marca Asus", name="Laptop Usada 1 año", owner_id=1, category_id=1)
 
-    product2 = entities.Product(description="Marca Asus", name="Libro Usada 1 año", owner_id=1, category_id=1)
+    product2 = entities.Product(description="Marca Zara", name="Pantalon Usada 1 año", owner_id=1, category_id=1)
 
-    product3 = entities.Product(description="Marca Asus", name="Zapatos Usada 1 año", owner_id=1, category_id=1)
+    product3 = entities.Product(description="Marca Zara", name="Zapatos Usada 1 año", owner_id=1, category_id=1)
 
-    product4 = entities.Product(description="Marca Asus", name="Lentes Usada 1 año", owner_id=1, category_id=1)
+    product4 = entities.Product(description="Marca Emporio Armani", name="Lentes Usada 1 año", owner_id=1, category_id=1)
 
-    product5 = entities.Product(description="Marca Asus", name="Colonia Usada 1 año", owner_id=1, category_id=1)
+    product5 = entities.Product(description="Marca Casa Ideas", name="Conjunto de muebles Usado 2 años", owner_id=1, category_id=1)
     
-    product6 =entities.Product(description="Marca Asus", name="Celular Usada 1 año", owner_id=1, category_id=1)
+    product6 = entities.Product(description="Marca Nike", name="Camiseta de fútbol Usada 3 meses", owner_id=1, category_id=1)
 
-    product7 = entities.Product(description="Marca Asus", name="Adorno Usada 1 año", owner_id=1, category_id=1)
+    product7 = entities.Product(description="Marca Nike", name="Chimpunes Usados 8 meses", owner_id=1, category_id=1)
 
-    product8 = entities.Product(description="Marca Asus", name="Stewart Usada 1 año", owner_id=1, category_id=1)
+    product8 = entities.Product(description="Marca Toyota", name="Corolla 2015", owner_id=1, category_id=1)
 
-    product9 = entities.Product(description="Marca Asus", name="Bolsa Usada 1 año", owner_id=1, category_id=1)
+    product9 = entities.Product(description="Marca Ford", name="Mustang 2018", owner_id=1, category_id=1)
 
-    product10 = entities.Product(description="Marca Asus", name="Linterna Usada 1 año", owner_id=1, category_id=1)
+    product10 = entities.Product(description="Marca Chevrolet", name="Camaro 2018", owner_id=1, category_id=1)
 
-    product11 = entities.Product(description="Marca Asus", name="Teclado Usada 1 año", owner_id=1, category_id=1)
+    product11 = entities.Product(description="Marca Totto", name="Mochila Usada 2 meses", owner_id=1, category_id=1)
     
-    product12 = entities.Product(description="Marca Asus", name="Piano Usada 1 año", owner_id=1, category_id=1)
+    product12 = entities.Product(description="Marca Tommy Hilfiger", name="Camisa talla M Usada 4 meses", owner_id=1, category_id=1)
 
-    product13 = entities.Product(description="Marca Asus", name="Cuadro Usada 1 año", owner_id=1, category_id=1)
+    product13 = entities.Product(description="Marca Marathon", name="Camiseta Universitario de Deportes Usada 9 meses", owner_id=1, category_id=1)
     
-    product14 = entities.Product(description="Marca Asus", name="Tv Usada 1 año", owner_id=1, category_id=1)
+    product14 = entities.Product(description="Marca Marathon", name="Camiseta Peru Usada 1 mes", owner_id=1, category_id=1)
+
+    product15 = entities.Product(description="Marca Nike", name="Camiseta Alinza Lima Usada 5 meses", owner_id=1, category_id=1)
+
+    product16 = entities.Product(description="Marca Puma", name="Spikes Usada 11 meses", owner_id=1, category_id=1)
+
+    product17 = entities.Product(description="Marca Tech21", name="Case Iphone XS Max Usada 1 año", owner_id=1, category_id=1)
+
+    product18 = entities.Product(description="Marca Ray-Ban", name="Lentes de Sol Usada 7 meses", owner_id=1, category_id=1)
+
+    product19 = entities.Product(description="Marca Huawei", name="Laptop Usada 2 meses", owner_id=1, category_id=1)
+
+    product20 = entities.Product(description="Marca Apple", name="Iphone XS Max Usado 10 meses", owner_id=1, category_id=1)
+
+    product21 = entities.Product(description="Marca Apple", name="Ipad Usada 1 año", owner_id=1, category_id=1)
+
+    product22 = entities.Product(description="Marca Samsung", name="Reloj Usada 5 meses", owner_id=1, category_id=1)
+
+    product23 = entities.Product(description="Marca Samsung", name="Laptop Usada 3 años", owner_id=1, category_id=1)
+
+    product24 = entities.Product(description="Marca Samsung", name="Tv Usada 1 año", owner_id=1, category_id=1)
+
+    product25 = entities.Product(description="Marca Apple", name="Laptop Usada 1 año", owner_id=1, category_id=1)
+
+    product26 = entities.Product(description="Marca Apple", name="Airpods Usado 6 meses", owner_id=1, category_id=1)
+
+    product27 = entities.Product(description="Marca Apple", name="Apple Watch Series 4 Usado 6 meses", owner_id=1, category_id=1)
+
+    product28 = entities.Product(description="Marca Puma", name="Zapatilla Usada 4 meses", owner_id=1, category_id=1)
+
+    product29 = entities.Product(description="Marca Nike", name="Zapatilla Usada 1 mes", owner_id=1, category_id=1)
+
+    product30 = entities.Product(description="Marca Adidas", name="Zapatilla Usada 2 meses", owner_id=1, category_id=1)
+
+
 
     db_session.add(product1)
     db_session.add(product2)
@@ -186,6 +221,22 @@ def create_test_products():
     db_session.add(product12)
     db_session.add(product13)
     db_session.add(product14)
+    db_session.add(product15)
+    db_session.add(product16)
+    db_session.add(product17)
+    db_session.add(product18)
+    db_session.add(product19)
+    db_session.add(product20)
+    db_session.add(product21)
+    db_session.add(product22)
+    db_session.add(product23)
+    db_session.add(product24)
+    db_session.add(product25)
+    db_session.add(product26)
+    db_session.add(product27)
+    db_session.add(product28)
+    db_session.add(product29)
+    db_session.add(product30)
     db_session.commit()
     return "Productos creados!"
 
