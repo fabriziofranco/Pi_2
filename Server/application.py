@@ -145,190 +145,202 @@ def create_test_users():
 def create_test_products():
     db_session = db.getSession(engine)
 
-    product1 = entities.Product(description="Marca Asus", name="Laptop de 32 gb de Ram "
-                                                               "15 pulgadas "
-                                                               "intel core i9" 
-                                                               "Disco duro solido 1TB "
-                                                               "Usada 1 año", owner_id=1, category_id=1)
+    product1 = entities.Product(description="Marca Asus"
+                                            "Laptop de 32 gb de Ram "
+                                            "15 pulgadas "
+                                            "intel core i9" 
+                                            "Disco duro solido 1TB "
+                                            "Usada 1 año", name="Laptop", owner_id=1, category_id=1)
 
-    product2 = entities.Product(description="Marca Zara", name="Pantalon negro talla 32 "
-                                                               "Coleccion Invierno 2017 "
-                                                               "Con unos pequeños rasguños"
-                                                               "Usada 1 año", owner_id=1, category_id=1)
+    product2 = entities.Product(description="Marca Zara"
+                                            "negro talla 32 "
+                                            "Coleccion Invierno 2017 "
+                                            "Con unos pequeños rasguños"
+                                            "Usada 1 año", name="Pantalon", owner_id=1, category_id=1)
 
-    product3 = entities.Product(description="Marca Zara", name="Zapatos negros talla 9"
-                                                               "Zapatos para hombre"
-                                                               "Apariencia 8/10"
-                                                               "Usada 1 año", owner_id=1, category_id=1)
+    product3 = entities.Product(description="Marca Zara"
+                                            "negros talla 9"
+                                            "Zapatos para hombre"
+                                            "Apariencia 8/10"
+                                            "Usada 1 año", name="Zapatos", owner_id=1, category_id=1)
 
-    product4 = entities.Product(description="Marca Emporio Armani", name="Lentes azules"
-                                                                         "Con pequeños rayones"
-                                                                         "Colecciñn verano 2018"
-                                                                         "Estado 7/10"
-                                                                         "Usados 1 año", owner_id=1, category_id=1)
+    product4 = entities.Product(description="Marca Emporio Armani"
+                                            "azules"
+                                            "Con pequeños rayones"
+                                            "Colección verano 2018"
+                                            "Estado 7/10"
+                                            "Usados 1 año", name="Lentes", owner_id=1, category_id=1)
 
-    product5 = entities.Product(description="Marca Casa Ideas", name="Conjunto de muebles"
-                                                                     "Muebles de color marrñn"
-                                                                     "Algunos muebles presentan arañones"
-                                                                     "Apariencia 7/10"
-                                                                     "Usado 2 años", owner_id=1, category_id=1)
+    product5 = entities.Product(description="Marca Casa Ideas"
+                                            "Muebles de color marrón"
+                                            "Algunos muebles presentan arañones"
+                                            "Apariencia 7/10"
+                                            "Usado 2 años", name="Conjunto de muebles", owner_id=1, category_id=1)
     
-    product6 = entities.Product(description="Marca Nike", name="Camiseta de fñtbol "
-                                                               "Equipo PSG"
-                                                               "Neymar 10"
-                                                               "Temporada 2018-2019 "
-                                                               "Usada 3 meses", owner_id=1, category_id=1)
+    product6 = entities.Product(description="Marca Nike"
+                                            "Equipo PSG"
+                                            "Neymar 10"
+                                            "Temporada 2018-2019 "
+                                            "Usada 3 meses", name="Camiseta de futbol", owner_id=1, category_id=1)
 
-    product7 = entities.Product(description="Marca Nike", name="Chimpunes talla 11"
-                                                               "Modelo Mercurial"
-                                                               "CR7"
-                                                               "Estado 9/10"
-                                                               "Usados 8 meses", owner_id=1, category_id=1)
+    product7 = entities.Product(description="Marca Nike"
+                                            "talla 11"
+                                            "Modelo Mercurial"
+                                            "CR7"
+                                            "Estado 9/10"
+                                            "Usados 8 meses", name="Chimpunes", owner_id=1, category_id=1)
 
-    product8 = entities.Product(description="Marca Toyota", name="Corolla 2015"
-                                                                 "Color negro"
-                                                                 "Mecñnico"
-                                                                 "Radio de fñbrica"
-                                                                 "12 000 km", owner_id=1, category_id=1)
+    product8 = entities.Product(description="Marca Toyota"
+                                            "Color negro"
+                                            "Mecanico"
+                                            "Radio de fñbrica"
+                                            "12 000 km", name="Corolla 2015", owner_id=1, category_id=1)
 
-    product9 = entities.Product(description="Marca Ford", name="Mustang 2018"
-                                                               "Color Amarillo"
-                                                               "Automñtico"
-                                                               "Estado 10/10"
-                                                               "10 000 km", owner_id=1, category_id=1)
+    product9 = entities.Product(description="Marca Ford"
+                                            "Color Amarillo"
+                                            "Automñtico"
+                                            "Estado 10/10"
+                                            "10 000 km", name="Mustang 2018", owner_id=1, category_id=1)
 
-    product10 = entities.Product(description="Marca Chevrolet", name="Camaro 2018"
-                                                                     "Colo Negro"
-                                                                     "Automatico"
-                                                                     "Estado 9/10"
-                                                                     "5 000 km", owner_id=1, category_id=1)
+    product10 = entities.Product(description="Marca Chevrolet"
+                                             "Colo Negro"
+                                             "Automatico"
+                                            "Estado 9/10"
+                                            "5 000 km", name="Camaro 2018", owner_id=1, category_id=1)
 
-    product11 = entities.Product(description="Marca Totto", name="Mochila roja con negro"
-                                                                 "Para cuadernos"
-                                                                 "Guarda laptop"
-                                                                 "3 cierres"
-                                                                 "Usada 2 meses", owner_id=1, category_id=1)
+    product11 = entities.Product(description="Marca Totto"
+                                             "Roja con negro"
+                                             "Para cuadernos"
+                                             "Guarda laptop"
+                                            "3 cierres"
+                                            "Usada 2 meses", name="Mochila", owner_id=1, category_id=1)
+
+    product12 = entities.Product(description="Marca Tommy Hilfiger"
+                                             "talla M "
+                                            "Color blanco"
+                                            "Estado 10/10"
+                                            "Usada 4 meses", name="Camisa", owner_id=1, category_id=1)
+
+    product13 = entities.Product(description="Marca Marathon"
+                                             "Color Crema"
+                                            "Estado 9/10"
+                                            "Temporada 2019"
+                                            "Usada 9 meses", name="Camiseta Universitario de Deportes", owner_id=1, category_id=1)
     
-    product12 = entities.Product(description="Marca Tommy Hilfiger", name="Camisa talla M "
-                                                                          "Color blanco"
-                                                                          "Estado 10/10"
-                                                                          "Usada 4 meses", owner_id=1, category_id=1)
+    product14 = entities.Product(description="Marca Marathon"
+                                             "Paolo Guerrero"
+                                            "Edicion Copa America"
+                                            "Estado 8/10"
+                                            "Usada 1 mes", name="Camiseta Peru", owner_id=1, category_id=1)
 
-    product13 = entities.Product(description="Marca Marathon", name="Camiseta Universitario de Deportes "
-                                                                    "Color Crema"
-                                                                    "Estado 9/10"
-                                                                    "Temporada 2019"
-                                                                    "Usada 9 meses", owner_id=1, category_id=1)
-    
-    product14 = entities.Product(description="Marca Marathon", name="Camiseta Peru "
-                                                                    "Paolo Guerrero"
-                                                                    "Edicion Copa America"
-                                                                    "Estado 8/10"
-                                                                    "Usada 1 mes", owner_id=1, category_id=1)
+    product15 = entities.Product(description="Marca Nike"
+                                             "Blanquiazul"
+                                            "Estado 8/10"
+                                            "Usada 5 meses", name="Camiseta Alinza Lima", owner_id=1, category_id=1)
 
-    product15 = entities.Product(description="Marca Nike", name="Camiseta Alinza Lima "
-                                                                "Blanquiazul"
-                                                                "Estado 8/10"
-                                                                "Usada 5 meses", owner_id=1, category_id=1)
+    product16 = entities.Product(description="Marca Puma"
+                                             "talla 10.5"
+                                            "Color Amarillo"
+                                            "Velocidad"
+                                            "Estado 7/10"
+                                            "Usada 11 meses", name="Spikes Atletismo", owner_id=1, category_id=1)
 
-    product16 = entities.Product(description="Marca Puma", name="Spikes Usada talla 10.5"
-                                                                "Color Amarillo"
-                                                                "Velocidad"
-                                                                "Estado 7/10"
-                                                                "11 meses", owner_id=1, category_id=1)
+    product17 = entities.Product(description="Marca Tech21"
+                                             "Color negro"
+                                            "Estado 6/10"
+                                            "Usado 1 año", name="Case Iphone XS Max", owner_id=1, category_id=1)
 
-    product17 = entities.Product(description="Marca Tech21", name="Case Iphone XS Max "
-                                                                  "Color negro"
-                                                                  "Estado 6/10"
-                                                                  "Usado 1 año", owner_id=1, category_id=1)
+    product18 = entities.Product(description="Marca Ray-Ban"
+                                             "Color negro"
+                                            "Hombre"
+                                            "Estado 7/10"
+                                            "Usada 7 meses", name="Lentes de Sol", owner_id=1, category_id=1)
 
-    product18 = entities.Product(description="Marca Ray-Ban", name="Lentes de Sol "
-                                                                   "Color negro"
-                                                                   "Hombre"
-                                                                   "Estado 7/10"
-                                                                   "Usada 7 meses", owner_id=1, category_id=1)
+    product19 = entities.Product(description="Marca Huawei"
+                                             "13 pulgadas"
+                                            "16 gb ram"
+                                            "500 gb de almacenamiento"
+                                            "Tactil"
+                                            "Usada 2 meses", name="Laptop", owner_id=1, category_id=1)
 
-    product19 = entities.Product(description="Marca Huawei", name="Laptop 13 pulgadas"
-                                                                  "16 gb ram"
-                                                                  "500 gb de almacenamiento"
-                                                                  "Tñctil"
-                                                                  "Usada 2 meses", owner_id=1, category_id=1)
+    product20 = entities.Product(description="Marca Apple"
+                                             "Negro"
+                                            "256 gb"
+                                            "Cero rasguños"
+                                            "Estado 9/10"
+                                             "Usado 10 meses", name="Iphone XS Max ", owner_id=1, category_id=1)
 
-    product20 = entities.Product(description="Marca Apple", name="Iphone XS Max "
-                                                                 "Negro"
-                                                                 "256 gb"
-                                                                 "Cero rasguños"
-                                                                 "Estado 9/10"
-                                                                 "Usado 10 meses", owner_id=1, category_id=1)
+    product21 = entities.Product(description="Marca Apple"
+                                            "4 gb ram"
+                                             "Color blanco"
+                                             "Camara dañada"
+                                             "Estado 5/10"
+                                             "Usado 1 año", name="Ipad", owner_id=1, category_id=1)
 
-    product21 = entities.Product(description="Marca Apple", name="Ipad"
-                                                                 "4 gb ram"
-                                                                 "Color blanco"
-                                                                 "Camara dañada"
-                                                                 "Estado 5/10"
-                                                                 "Usado 1 año", owner_id=1, category_id=1)
+    product22 = entities.Product(description="Marca Samsung"
+                                             "Color negro"
+                                             "Unisex"
+                                             "Estado 10/10"
+                                             "Usado 5 meses", name="Reloj", owner_id=1, category_id=1)
 
-    product22 = entities.Product(description="Marca Samsung", name="Reloj "
-                                                                   "Color negro"
-                                                                   "Unisex"
-                                                                   "Estado 10/10"
-                                                                   "Usado 5 meses", owner_id=1, category_id=1)
+    product23 = entities.Product(description="Marca Nike"
+                                             "Estado 3/10"
+                                             "Color rojo"
+                                             "Tienen Arañones"
+                                             "Usada 3 años", name="Canilleras Futbol", owner_id=1, category_id=1)
 
-    product23 = entities.Product(description="Marca Nike", name="Canilleras Futbol"
-                                                                "Estado 3/10"
-                                                                "Color rojo"
-                                                                "Tienen Arañones"
-                                                                "Usada 3 años", owner_id=1, category_id=1)
+    product24 = entities.Product(description="Marca Samsung"
+                                             "50 pulgadas"
+                                             "3D + lentes"
+                                             "Estado 9/10"
+                                             "Usada 1 año", name="Smart Tv", owner_id=1, category_id=1)
 
-    product24 = entities.Product(description="Marca Samsung", name="Smart Tv "
-                                                                   "50 pulgadas"
-                                                                   "3D + lentes"
-                                                                   "Estado 9/10"
-                                                                   "Usada 1 año", owner_id=1, category_id=1)
+    product25 = entities.Product(description="Marca Apple"
+                                             "32 gb ram"
+                                             "15 pulgadas"
+                                             "1 tb de almacenamiento"
+                                             "Intel core i7"
+                                             "Estado 8/10"
+                                             "Usada 1 año", name="Laptop", owner_id=1, category_id=1)
 
-    product25 = entities.Product(description="Marca Apple", name="Laptop "
-                                                                 "32 gb ram"
-                                                                 "15 pulgadas"
-                                                                 "1 tb de almacenamiento"
-                                                                 "Intel core i7"
-                                                                 "Estado 8/10"
-                                                                 "Usada 1 año", owner_id=1, category_id=1)
+    product26 = entities.Product(description="Marca Apple"
+                                             "Primera generacion"
+                                             "Case en perfecto estado"
+                                             "Viene con cargador"
+                                             "Estado 9/10"
+                                             "Usado 6 meses", name="Airpods", owner_id=1, category_id=1)
 
-    product26 = entities.Product(description="Marca Apple", name="Airpods "
-                                                                 "Primera generacion"
-                                                                 "Case en perfecto estado"
-                                                                 "Viene con cargador"
-                                                                 "Estado 9/10"
-                                                                 "Usado 6 meses", owner_id=1, category_id=1)
+    product27 = entities.Product(description="Marca Apple"
+                                             "Primera generacion"
+                                             "Case en perfecto estado"
+                                             "Viene con cargador"
+                                             "Estado 9/10"
+                                             "Usado 6 meses", name="Apple Watch Series 4", owner_id=1, category_id=1)
 
-    product27 = entities.Product(description="Marca Apple", name="Apple Watch Series 4 "
-                                                                 "Color negro"
-                                                                 "44 mm"
-                                                                 "Nike Sport"
-                                                                 "Estado 8/10"
-                                                                 "Usado 6 meses", owner_id=1, category_id=1)
+    product28 = entities.Product(description="Marca Puma"
+                                             "Talla 8"
+                                             "Mujer"
+                                             "Color blanco"
+                                             "Running"
+                                             "Estado 7/10"
+                                             "Usada 4 meses", name="Zapatilla", owner_id=1, category_id=1)
 
-    product28 = entities.Product(description="Marca Puma", name="Zapatilla talla 8"
-                                                                "Mujer"
-                                                                "Color blanco"
-                                                                "Running"
-                                                                "Estado 7/10"
-                                                                "Usada 4 meses", owner_id=1, category_id=1)
+    product29 = entities.Product(description="Marca Nike"
+                                             "Talla 10"
+                                             "Hombre"
+                                             "Color Azul"
+                                             "Running"
+                                             "Estado 10/10"
+                                            "Usada 1 mes", name="Zapatilla", owner_id=1, category_id=1)
 
-    product29 = entities.Product(description="Marca Nike", name="Zapatilla talla 10"
-                                                                "Hombre"
-                                                                "Color Azul"
-                                                                "Running"
-                                                                "Estado 10/10"
-                                                                "Usada 1 mes", owner_id=1, category_id=1)
-
-    product30 = entities.Product(description="Marca Adidas", name="Zapatilla talla 9.5"
-                                                                  "Hombre"
-                                                                  "Color Blanco"
-                                                                  "Pureboost"
-                                                                  "Running"
-                                                                  "Estado 10/10"
-                                                                  "Usada 2 meses", owner_id=1, category_id=1)
+    product30 = entities.Product(description="Marca Adidas"
+                                             " talla 9.5"
+                                             "Hombre"
+                                             "Color Blanco"
+                                             "Pureboost"
+                                             "Running"
+                                             "Estado 10/10"
+                                             "Usada 2 meses", name="Zapatilla", owner_id=1, category_id=1)
 
 
 
