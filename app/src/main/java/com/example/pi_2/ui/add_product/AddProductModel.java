@@ -1,4 +1,4 @@
-package com.example.pi_2.ui.dashboard;
+package com.example.pi_2.ui.add_product;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -8,10 +8,7 @@ public class AddProductModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public AddProductModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
-    }
+    public AddProductModel() { }
 
     public LiveData<String> getText() {
         return mText;

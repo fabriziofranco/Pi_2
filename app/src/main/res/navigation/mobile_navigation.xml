@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.pi_2.ui.dashboard.AddProductFragment"
+        android:name="com.example.pi_2.ui.add_product.AddProductFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_add_product" />
 
