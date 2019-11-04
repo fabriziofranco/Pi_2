@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,7 +37,7 @@ import com.example.pi_2.R;
 
 public class HomeFragment extends Fragment {
 
-
+    Spinner spinner;
     private View root;
     RecyclerView mRecyclerView;
 
@@ -56,6 +58,17 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter = new HomeAdapter(data_global, getActivity());
         mRecyclerView.setAdapter(mAdapter);
+
+
+        //Lista Desplegable
+        spinner = (Spinner)root.findViewById(R.id.categories_spinner);
+
+
+        String [] Opciones = {"Todo", "Laptop", "Celular", "Ropa", "Libros"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Opciones);
+        spinner.setAdapter(adapter);
+
         return root;
     }
 
