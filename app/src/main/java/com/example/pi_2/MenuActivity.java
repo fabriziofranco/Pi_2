@@ -1,6 +1,7 @@
 package com.example.pi_2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -8,6 +9,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 
+import com.example.pi_2.ui.add_product.AddProductFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MenuActivity extends AppCompatActivity {
@@ -28,6 +30,5 @@ public class MenuActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
         getSupportActionBar().hide();
-
     }
 }

@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -55,17 +56,24 @@ public class AddProductFragment extends Fragment {
         spinner = (Spinner)root.findViewById(R.id.categories_spinner);
 
 
-        String [] Opciones = {"Todo", "Tecnologia", "Hogar", "Ropa", "Libros"};
+        String [] Opciones = {"Tecnologia", "Hogar", "Ropa", "Libros", "Coleccionables"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Opciones);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.fondo_spinner, Opciones);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.getBackground().setColorFilter(getResources().getColor(R.color.Yellow), PorterDuff.Mode.SRC_ATOP);
-
+        String owner_id = getActivity().getIntent().getExtras().get("user_id").toString();
+        final TextView textView = root.findViewById(R.id.descripcion);
+        textView.setText(owner_id);
+        
 
         return root;
     }
+
+
+
+
 
     private void dispatchPictureTakenAction(){
         Intent takePic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

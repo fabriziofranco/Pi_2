@@ -5,7 +5,6 @@ import json
 import time
 import datetime
 
-
 db = connector.Manager()
 engine = db.createEngine()
 app = Flask(__name__)
@@ -145,156 +144,135 @@ def create_test_users():
 def create_test_products():
     db_session = db.getSession(engine)
 
+    # Tecnologia", "Hogar", "Ropa", "Libros", "Coleccionables"
+
     product1 = entities.Product(description="Marca Asus\n"
                                             "Laptop de 32 gb de Ram \n"
                                             "15 pulgadas\n "
-                                            "intel core i9\n" 
+                                            "intel core i9\n"
                                             "Disco duro solido 1TB \n"
                                             "Usada 1 año\n", name="Laptop", owner_id=1, category_id=1)
-
     product2 = entities.Product(description="Marca Zara\n"
                                             "negro talla 32\n "
                                             "Coleccion Invierno 2017\n "
                                             "Con unos pequeños rasguños\n"
-                                            "Usada 1 año\n", name="Pantalon", owner_id=1, category_id=1)
-
+                                            "Usada 1 año\n", name="Pantalon", owner_id=1, category_id=3)
     product3 = entities.Product(description="Marca Zara\n"
                                             "negros talla 9\n"
                                             "Zapatos para hombre\n"
                                             "Apariencia 8/10\n"
-                                            "Usada 1 año\n", name="Zapatos", owner_id=1, category_id=1)
-
+                                            "Usada 1 año\n", name="Zapatos", owner_id=1, category_id=3)
     product4 = entities.Product(description="Marca Emporio Armani\n"
                                             "azules\n"
                                             "Con pequeños rayones\n"
                                             "Colección verano 2018\n"
                                             "Estado 7/10\n"
-                                            "Usados 1 año\n", name="Lentes", owner_id=1, category_id=1)
-
+                                            "Usados 1 año\n", name="Lentes", owner_id=1, category_id=3)
     product5 = entities.Product(description="Marca Casa Ideas\n"
                                             "Muebles de color marrón\n"
                                             "Algunos muebles presentan arañones\n"
                                             "Apariencia 7/10\n"
-                                            "Usado 2 años\n", name="Conjunto de muebles", owner_id=1, category_id=1)
-    
+                                            "Usado 2 años\n", name="Conjunto de muebles", owner_id=1, category_id=2)
     product6 = entities.Product(description="Marca Nike\n"
                                             "Equipo PSG\n"
                                             "Neymar 10\n"
                                             "Temporada 2018-2019\n "
-                                            "Usada 3 meses\n", name="Camiseta de futbol", owner_id=1, category_id=1)
-
+                                            "Usada 3 meses\n", name="Camiseta de futbol", owner_id=1, category_id=3)
     product7 = entities.Product(description="Marca Nike\n"
                                             "talla 11\n"
                                             "Modelo Mercurial\n"
                                             "CR7\n"
                                             "Estado 9/10\n"
-                                            "Usados 8 meses\n", name="Chimpunes", owner_id=1, category_id=1)
-
+                                            "Usados 8 meses\n", name="Chimpunes", owner_id=1, category_id=3)
     product8 = entities.Product(description="Marca Toyota\n"
                                             "Color negro\n"
                                             "Mecanico\n"
                                             "Radio de fñbrica\n"
-                                            "12 000 km\n", name="Corolla 2015", owner_id=1, category_id=1)
-
+                                            "12 000 km\n", name="Corolla 2015", owner_id=1, category_id=5)
     product9 = entities.Product(description="Marca Ford\n"
                                             "Color Amarillo\n"
                                             "Automñtico\n"
                                             "Estado 10/10\n"
-                                            "10 000 km\n", name="Mustang 2018", owner_id=1, category_id=1)
-
+                                            "10 000 km\n", name="Mustang 2018", owner_id=1, category_id=5)
     product10 = entities.Product(description="Marca Chevrolet\n"
                                              "Colo Negro\n"
                                              "Automatico\n"
-                                            "Estado 9/10\n"
-                                            "5 000 km\n", name="Camaro 2018", owner_id=1, category_id=1)
-
+                                             "Estado 9/10\n"
+                                             "5 000 km\n", name="Camaro 2018", owner_id=1, category_id=5)
     product11 = entities.Product(description="Marca Totto\n"
                                              "Roja con negro\n"
                                              "Para cuadernos\n"
                                              "Guarda laptop\n"
-                                            "3 cierres\n"
-                                            "Usada 2 meses\n", name="Mochila", owner_id=1, category_id=1)
-
+                                             "3 cierres\n"
+                                             "Usada 2 meses\n", name="Mochila", owner_id=1, category_id=3)
     product12 = entities.Product(description="Marca Tommy Hilfiger\n"
                                              "talla M \n"
-                                            "Color blanco\n"
-                                            "Estado 10/10\n"
-                                            "Usada 4 meses\n", name="Camisa", owner_id=1, category_id=1)
-
+                                             "Color blanco\n"
+                                             "Estado 10/10\n"
+                                             "Usada 4 meses\n", name="Camisa", owner_id=1, category_id=3)
     product13 = entities.Product(description="Marca Marathon\n"
                                              "Color Crema\n"
-                                            "Estado 9/10\n"
-                                            "Temporada 2019\n"
-                                            "Usada 9 meses\n", name="Camiseta Universitario de Deportes", owner_id=1, category_id=1)
-    
+                                             "Estado 9/10\n"
+                                             "Temporada 2019\n"
+                                             "Usada 9 meses\n", name="Camiseta Universitario de Deportes", owner_id=1,
+                                 category_id=3)
     product14 = entities.Product(description="Marca Marathon\n"
                                              "Paolo Guerrero\n"
-                                            "Edicion Copa America\n"
-                                            "Estado 8/10\n"
-                                            "Usada 1 mes\n", name="Camiseta Peru", owner_id=1, category_id=1)
-
+                                             "Edicion Copa America\n"
+                                             "Estado 8/10\n"
+                                             "Usada 1 mes\n", name="Camiseta Peru", owner_id=1, category_id=3)
     product15 = entities.Product(description="Marca Nike\n"
                                              "Blanquiazul\n"
-                                            "Estado 8/10\n"
-                                            "Usada 5 meses\n", name="Camiseta Alinza Lima", owner_id=1, category_id=1)
-
+                                             "Estado 8/10\n"
+                                             "Usada 5 meses\n", name="Camiseta Alinza Lima", owner_id=1, category_id=3)
     product16 = entities.Product(description="Marca Puma\n"
                                              "talla 10.5\n"
-                                            "Color Amarillo\n"
-                                            "Velocidad\n"
-                                            "Estado 7/10\n"
-                                            "Usada 11 meses\n", name="Spikes Atletismo", owner_id=1, category_id=1)
-
+                                             "Color Amarillo\n"
+                                             "Velocidad\n"
+                                             "Estado 7/10\n"
+                                             "Usada 11 meses\n", name="Spikes Atletismo", owner_id=1, category_id=3)
     product17 = entities.Product(description="Marca Tech21\n"
                                              "Color negro\n"
-                                            "Estado 6/10\n"
-                                            "Usado 1 año\n", name="Case Iphone XS Max", owner_id=1, category_id=1)
-
+                                             "Estado 6/10\n"
+                                             "Usado 1 año\n", name="Case Iphone XS Max", owner_id=1, category_id=1)
     product18 = entities.Product(description="Marca Ray-Ban\n"
                                              "Color negro\n"
-                                            "Hombre\n"
-                                            "Estado 7/10\n"
-                                            "Usada 7 meses\n", name="Lentes de Sol", owner_id=1, category_id=1)
-
+                                             "Hombre\n"
+                                             "Estado 7/10\n"
+                                             "Usada 7 meses\n", name="Lentes de Sol", owner_id=1, category_id=3)
     product19 = entities.Product(description="Marca Huawei\n"
                                              "13 pulgadas\n"
-                                            "16 gb ram\n"
-                                            "500 gb de almacenamiento\n"
-                                            "Tactil\n"
-                                            "Usada 2 meses\n", name="Laptop", owner_id=1, category_id=1)
-
+                                             "16 gb ram\n"
+                                             "500 gb de almacenamiento\n"
+                                             "Tactil\n"
+                                             "Usada 2 meses\n", name="Laptop", owner_id=1, category_id=1)
     product20 = entities.Product(description="Marca Apple\n"
                                              "Negro\n"
-                                            "256 gb\n"
-                                            "Cero rasguños\n"
-                                            "Estado 9/10\n"
+                                             "256 gb\n"
+                                             "Cero rasguños\n"
+                                             "Estado 9/10\n"
                                              "Usado 10 meses\n", name="Iphone XS Max ", owner_id=1, category_id=1)
-
     product21 = entities.Product(description="Marca Apple\n"
-                                            "4 gb ram\n"
+                                             "4 gb ram\n"
                                              "Color blanco\n"
                                              "Camara dañada\n"
                                              "Estado 5/10\n"
                                              "Usado 1 año\n", name="Ipad", owner_id=1, category_id=1)
-
     product22 = entities.Product(description="Marca Samsung\n"
                                              "Color negro\n"
                                              "Unisex\n"
                                              "Estado 10/10\n"
                                              "Usado 5 meses\n", name="Reloj", owner_id=1, category_id=1)
-
     product23 = entities.Product(description="Marca Nike\n"
                                              "Estado 3/10\n"
                                              "Color rojo\n"
                                              "Tienen Arañones\n"
-                                             "Usada 3 años\n", name="Canilleras Futbol", owner_id=1, category_id=1)
-
+                                             "Usada 3 años\n", name="Canilleras Futbol", owner_id=1, category_id=3)
     product24 = entities.Product(description="Marca Samsung\n"
                                              "50 pulgadas\n"
                                              "3D + lentes\n"
                                              "Estado 9/10\n"
                                              "Usada 1 año\n", name="Smart Tv", owner_id=1, category_id=1)
-
     product25 = entities.Product(description="Marca Apple\n"
                                              "32 gb ram\n"
                                              "15 pulgadas\n"
@@ -302,37 +280,32 @@ def create_test_products():
                                              "Intel core i7\n"
                                              "Estado 8/10\n"
                                              "Usada 1 año\n", name="Laptop", owner_id=1, category_id=1)
-
     product26 = entities.Product(description="Marca Apple\n"
                                              "Primera generacion\n"
                                              "Case en perfecto estado\n"
                                              "Viene con cargador\n"
                                              "Estado 9/10\n"
                                              "Usado 6 meses\n", name="Airpods", owner_id=1, category_id=1)
-
     product27 = entities.Product(description="Marca Apple\n"
                                              "Primera generacion\n"
                                              "Case en perfecto estado\n"
                                              "Viene con cargador\n"
                                              "Estado 9/10\n"
                                              "Usado 6 meses\n", name="Apple Watch Series 4", owner_id=1, category_id=1)
-
     product28 = entities.Product(description="Marca Puma\n"
                                              "Talla 8\n"
                                              "Mujer\n"
                                              "Color blanco\n"
                                              "Running\n"
                                              "Estado 7/10\n"
-                                             "Usada 4 meses\n", name="Zapatilla", owner_id=1, category_id=1)
-
+                                             "Usada 4 meses\n", name="Zapatilla", owner_id=1, category_id=3)
     product29 = entities.Product(description="Marca Nike\n"
                                              "Talla 10\n"
                                              "Hombre\n"
                                              "Color Azul\n"
                                              "Running\n"
                                              "Estado 10/10\n"
-                                            "Usada 1 mes\n", name="Zapatilla", owner_id=1, category_id=1)
-
+                                             "Usada 1 mes\n", name="Zapatilla", owner_id=1, category_id=3)
     product30 = entities.Product(description="Marca Adidas\n"
                                              " talla 9.5\n"
                                              "Hombre\n"
@@ -340,9 +313,7 @@ def create_test_products():
                                              "Pureboost\n"
                                              "Running\n"
                                              "Estado 10/10\n"
-                                             "Usada 2 meses\n", name="Zapatilla", owner_id=1, category_id=1)
-
-
+                                             "Usada 2 meses\n", name="Zapatilla", owner_id=1, category_id=3)
 
     db_session.add(product1)
     db_session.add(product2)
@@ -489,41 +460,24 @@ def delete_user():
         return Response(message, status=401, mimetype='application/json')
 
 
-##############################################
-#                                            #
-#                 Questions                  #
-#                                            #
-##############################################
 
-@app.route('/questions', methods=['POST'])
-def create_question():
+@app.route('/createProduct', methods=['POST'])
+def create_product():
     sessiondb = db.getSession(engine)
     c = json.loads(request.data)
-    try:
-        user = entities.Question(
-            statment=c['statment'],
-            answer=c['answer'],
-            wrong1=c['wrong1'],
-            wrong2=c['wrong2'],
-            wrong3=c['wrong3'],
-            category_id=c['category_id'])
-        sessiondb.add(user)
-        sessiondb.commit()
-        message = {'message': 'Authorized'}
-        return Response(message, status=200, mimetype='application/json')
-    except Exception:
-        message = {'message': 'Unauthorized'}
-        return Response(message, status=401, mimetype='application/json')
-
-
-@app.route('/questions', methods=['GET'])
-def get_questions():
-    session = db.getSession(engine)
-    dbResponse = session.query(entities.Question)
     data = []
-    for user in dbResponse:
-        data.append(user)
-    return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
+
+    product = entities.Product(
+        name=c['name'],
+        description=c['description'],
+        category_id=c['category_id'],
+        owner_id=c['owner_id']
+    )
+    sessiondb.add(product)
+    sessiondb.commit()
+    message = {'message': 'Authorized'}
+    js = json.dumps(message, cls=connector.AlchemyEncoder)
+    return Response(js, status=200, mimetype='application/json')
 
 
 ##############################################
@@ -541,7 +495,8 @@ def get_users():
         data.append(user)
     return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
 
-@app.route('/products', methods = ['GET'])
+
+@app.route('/products', methods=['GET'])
 def get_products():
     session = db.getSession(engine)
     dbResponse = session.query(entities.Product)
@@ -552,15 +507,12 @@ def get_products():
     return Response(json.dumps(message, cls=connector.AlchemyEncoder), mimetype='application/json')
 
 
-@app.route('/product_by_id/<id>', methods = ['GET'])
+@app.route('/product_by_id/<id>', methods=['GET'])
 def get_product_by_id(id):
     session = db.getSession(engine)
     product = session.query(entities.Product).filter(entities.Product.id == id).one()
     js = json.dumps({'name': product.name, 'description': product.description}, cls=connector.AlchemyEncoder)
     return Response(js, status=200, mimetype='application/json')
-
-
-
 
 
 ##############################################

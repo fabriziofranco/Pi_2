@@ -66,8 +66,7 @@ public class HomeFragment extends Fragment {
         spinner = (Spinner)root.findViewById(R.id.categories_spinner);
 
 
-        String [] Opciones = {"Todo", "Tecnologia", "Hogar", "Ropa", "Libros"};
-
+        String [] Opciones = {"Todo","Tecnologia", "Hogar", "Ropa", "Libros", "Coleccionables"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Opciones);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
