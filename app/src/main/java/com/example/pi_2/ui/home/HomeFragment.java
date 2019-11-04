@@ -1,6 +1,8 @@
 package com.example.pi_2.ui.home;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,12 +66,13 @@ public class HomeFragment extends Fragment {
         spinner = (Spinner)root.findViewById(R.id.categories_spinner);
 
 
-        String [] Opciones = {"Todo", "Laptop", "Celular", "Ropa", "Libros"};
+        String [] Opciones = {"Todo", "Tecnologia", "Hogar", "Ropa", "Libros"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Opciones);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        spinner.getBackground().setColorFilter(getResources().getColor(R.color.Yellow), PorterDuff.Mode.SRC_ATOP);
 
         return root;
     }

@@ -3,14 +3,17 @@ package com.example.pi_2.ui.add_product;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +30,8 @@ public class AddProductFragment extends Fragment {
     private AddProductModel addProductModel;
 
     ImageButton camera;
+    Spinner spinner;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -47,7 +52,16 @@ public class AddProductFragment extends Fragment {
                 dispatchPictureTakenAction();
             }
         });
+        spinner = (Spinner)root.findViewById(R.id.categories_spinner);
 
+
+        String [] Opciones = {"Todo", "Tecnologia", "Hogar", "Ropa", "Libros"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Opciones);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.getBackground().setColorFilter(getResources().getColor(R.color.Yellow), PorterDuff.Mode.SRC_ATOP);
 
 
         return root;

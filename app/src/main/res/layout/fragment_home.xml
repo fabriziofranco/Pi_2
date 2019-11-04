@@ -17,33 +17,36 @@
             android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:backgroundTint="#FFC312"
             android:ems="10"
             android:gravity="center"
             android:hint="Elige un producto"
             android:textAlignment="center"
             android:textColorHint="#B3FFC312"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
+            android:textColor="#B3FFC312"
+            android:textSize="15sp"
+ />
+        <Spinner
+            android:id="@+id/categories_spinner"
+            android:gravity="end"
+            android:textAlignment="textEnd"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:background="@drawable/corners_buttons"
+            android:layout_marginLeft="10sp"
+            android:background="@drawable/corners_buttons2"
             android:fontFamily="casual"
             android:text="Buscar"
             android:textColor="#000"
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/categories_spinner"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
