@@ -11,9 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/dashboard/AddProductFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/add_product/AddProductFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/dashboard/AddProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/add_product/AddProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/add_product/AddProductFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/pi_2/ui/add_product/AddProductFragment.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +114,10 @@
       <workItem from="1572666025119" duration="3493000" />
       <workItem from="1572678395357" duration="29000" />
       <workItem from="1572726783434" duration="20337000" />
+      <workItem from="1572841537794" duration="6955000" />
+      <workItem from="1572898860202" duration="831000" />
+      <workItem from="1572914690879" duration="572000" />
+      <workItem from="1572929830802" duration="599000" />
     </task>
     <servers />
   </component>
@@ -127,7 +129,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -135,7 +139,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Server$Flask__application_py_.coverage" NAME="Flask (application.py) Coverage Results" MODIFIED="1572034895543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Server$application.coverage" NAME="application Coverage Results" MODIFIED="1572822731903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Server$application.coverage" NAME="application Coverage Results" MODIFIED="1572914716455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Server$Server.coverage" NAME="Server Coverage Results" MODIFIED="1572034778943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -29,14 +29,12 @@ import com.example.pi_2.ui.add_product.AddProductModel;
 public class AddProductFragment extends Fragment {
 
     private AddProductModel addProductModel;
-
     ImageButton camera;
     Spinner spinner;
 
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         addProductModel =
                 ViewModelProviders.of(this).get(AddProductModel.class);
         View root = inflater.inflate(R.layout.fragment_add_product, container, false);
@@ -66,7 +64,7 @@ public class AddProductFragment extends Fragment {
         String owner_id = getActivity().getIntent().getExtras().get("user_id").toString();
         final TextView textView = root.findViewById(R.id.descripcion);
         textView.setText(owner_id);
-        
+
 
         return root;
     }
