@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pi_2.MainActivity;
 import com.example.pi_2.Producto;
 import com.example.pi_2.R;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,11 +34,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView first_line;
         RelativeLayout container;
+        ImageView iamgen;
 
         public ViewHolder(View itemView) {
             super(itemView);
             first_line = itemView.findViewById(R.id.element_view2_first_line);
             container = itemView.findViewById(R.id.element_view2_container);
+            iamgen = itemView.findViewById(R.id.element_view2_image);
         }
     }
 
@@ -50,10 +54,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
         try {
+            holder.setIsRecyclable(false);
             JSONObject element = elements.getJSONObject(position);
             String name = element.getString("name");
             final String id = element.getString("id");
             holder.first_line.setText(name);
+            Picasso.get().load(element.getString("url")).into(holder.iamgen);
             holder.container.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
