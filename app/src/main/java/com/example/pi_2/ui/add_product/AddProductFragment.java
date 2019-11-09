@@ -61,7 +61,7 @@ public class AddProductFragment extends Fragment {
     Button botoncito;
     private final int PICK_IMAGE_REQUEST = 71;
     Uri uri;
-    String urlFinal,owner_id;
+    String urlFinal = null,owner_id;
 
     private StorageReference mStorageRef;
 
@@ -110,7 +110,6 @@ public class AddProductFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 StorageReference filepath = mStorageRef.child("Photo");
-                uploadImage();
                 PostProduct();
 
             }
@@ -137,17 +136,8 @@ public class AddProductFragment extends Fragment {
                     while(!downloadUri.isComplete());
                     final Uri url = downloadUri.getResult();
                     urlFinal = url.toString();
-                    Toast.makeText(getActivity(), "Uploaded", Toast.LENGTH_SHORT).show();
-                    Thread someThread = new Thread() {
 
-                        @Override
-                        public void run() {
-                            //some actions
-                            while ((urlFinal==null)); //wait for condition
-                                
-                        }
 
-                    };
 
                 }
             });
@@ -239,6 +229,7 @@ public class AddProductFragment extends Fragment {
         super.onActivityResult(requestcode, resultcode, data);
         if(requestcode == 0){
             uri = data.getData();
+            uploadImage();
             try{
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
                 camera.setImageBitmap(bitmap);
