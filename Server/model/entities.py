@@ -35,6 +35,8 @@ class Product(connector.Manager.Base):
     owner_id = Column(Integer, ForeignKey('users.id'))
     owner = relationship(User, foreign_keys=[owner_id])
 
+    url = Column(String(5000), default="ZZZ")
+
 
 class Transaction(connector.Manager.Base):
     __tablename__ = 'transactions'

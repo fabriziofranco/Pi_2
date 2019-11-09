@@ -469,6 +469,7 @@ def create_product():
 
     product = entities.Product(
         name=c['name'],
+        url=c['url'],
         description=c['description'],
         category_id=c['category_id'],
         owner_id=c['owner_id']
