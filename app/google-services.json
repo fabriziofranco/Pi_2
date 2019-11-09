@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "526185938535",
+    "firebase_url": "https://circular-18bbd.firebaseio.com",
+    "project_id": "circular-18bbd",
+    "storage_bucket": "circular-18bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526185938535:android:127b429812a24a2ac31ec2",
+        "android_client_info": {
+          "package_name": "com.example.pi_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526185938535-2637udegti2gvmm144qhnipllibhjn47.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pi_2",
+            "certificate_hash": "e9296ea491e817dea65f21b7ef2e5965847dfc87"
+          }
+        },
+        {
+          "client_id": "526185938535-bupcgrj144deeq3583lanrqdq986fqnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPbkcKECEoKaUsy2t1GvbhSpuYqvBdFgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526185938535-bupcgrj144deeq3583lanrqdq986fqnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
