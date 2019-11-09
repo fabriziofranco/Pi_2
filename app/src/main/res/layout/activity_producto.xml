@@ -15,10 +15,9 @@
 
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/imagen2"
             android:layout_width="250dp"
             android:layout_margin="40dp"
-            android:background="#000"
             android:layout_height="250dp">
         </ImageView>
 

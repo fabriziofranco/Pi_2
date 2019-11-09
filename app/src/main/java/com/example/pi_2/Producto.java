@@ -2,7 +2,9 @@ package com.example.pi_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -11,9 +13,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
+
+import static java.security.AccessController.getContext;
 
 public class Producto extends AppCompatActivity {
 
@@ -40,6 +47,8 @@ public class Producto extends AppCompatActivity {
                             String description1 = response.getString("description");
                             name.setText(name1);
                             description.setText(description1);
+                            ImageView imagen = findViewById(R.id.imagen2);
+                            Picasso.get().load(response.getString("url")).into(imagen);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
