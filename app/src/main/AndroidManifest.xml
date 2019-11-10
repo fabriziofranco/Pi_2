@@ -11,7 +11,11 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".One_Product" android:theme="@style/AppTheme"></activity>
+        <activity android:name=".One_Offer"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".One_Product"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MyOffers"
             android:theme="@style/AppTheme" />

@@ -63,11 +63,11 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/MyOffersAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="63" column="89" lean-forward="true" selection-start-line="63" selection-start-column="89" selection-end-line="63" selection-end-column="89" />
+            <state relative-caret-position="289">
+              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2269#2581#0" expanded="true" />
@@ -75,6 +75,17 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_one__offer.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/One_Offer.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -442,7 +453,7 @@
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4994664" weight="0.32829374" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50213444" side_tool="true" weight="0.50215983" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49733192" weight="0.1738661" />
+      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49733192" visible="true" weight="0.1738661" />
       <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.64140874" weight="0.30453563" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49786553" weight="0.50215983" />
@@ -466,8 +477,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.0.0/bcd167792ec03e930d5c8345c99ae07b2627de84/fragment-1.0.0-sources.jar!/androidx/fragment/app/Fragment.java" />
-    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-29/android.jar!/android/os/Handler.class" />
     <entry file="file://$PROJECT_DIR$/Server/application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
@@ -851,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/MyOffersAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="63" column="89" lean-forward="true" selection-start-line="63" selection-start-column="89" selection-end-line="63" selection-end-column="89" />
+        <state relative-caret-position="289">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2269#2581#0" expanded="true" />
@@ -860,6 +869,13 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_one__offer.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/One_Offer.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
