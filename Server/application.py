@@ -156,44 +156,44 @@ def create_test_products():
                                             "negro talla 32\n\n "
                                             "Coleccion Invierno 2017\n\n "
                                             "Con unos pequeños rasguños\n\n"
-                                            "Usada 1 año\n\n", name="Pantalon", owner_id=1, category_id=3, url="https://static.zara.net/photos//mkt/spots/aw19-north-stay-minimal-woman/home-41//desktop-aw19-north-stay-minimal-woman-img-01.st.jpg?ts=1570721136988")
+                                            "Usada 1 año\n\n", name="Pantalon", owner_id=2, category_id=3, url="https://static.zara.net/photos//mkt/spots/aw19-north-stay-minimal-woman/home-41//desktop-aw19-north-stay-minimal-woman-img-01.st.jpg?ts=1570721136988")
     product3 = entities.Product(description="Marca Zara\n\n"
                                             "negros talla 9\n\n"
                                             "Zapatos para hombre\n\n"
                                             "Apariencia 8/10\n\n"
-                                            "Usada 1 año\n\n", name="Zapatos", owner_id=1, category_id=3, url = "https://static.zara.net/photos///2019/V/1/2/p/2403/002/105/2/w/560/2403002105_2_3_1.jpg?ts=1551950847161")
+                                            "Usada 1 año\n\n", name="Zapatos", owner_id=3, category_id=3, url = "https://static.zara.net/photos///2019/V/1/2/p/2403/002/105/2/w/560/2403002105_2_3_1.jpg?ts=1551950847161")
     product4 = entities.Product(description="Marca Emporio Armani\n\n"
                                             "azules\n\n"
                                             "Con pequeños rayones\n\n"
                                             "Colección verano 2018\n\n"
                                             "Estado 7/10\n\n"
-                                            "Usados 1 año\n\n", name="Lentes", owner_id=1, category_id=3, url="https://www.visioncenter.com.pe/wp-content/uploads/2018/12/EPEA40950176GS_2_r1_c1.png")
+                                            "Usados 1 año\n\n", name="Lentes", owner_id=14, category_id=3, url="https://www.visioncenter.com.pe/wp-content/uploads/2018/12/EPEA40950176GS_2_r1_c1.png")
     product5 = entities.Product(description="Marca Casa Ideas\n\n"
                                             "Muebles de color marrón\n\n"
                                             "Algunos muebles presentan arañones\n\n"
                                             "Apariencia 7/10\n\n"
-                                            "Usado 2 años\n\n", name="Conjunto de muebles", owner_id=1, category_id=2, url="https://i.pinimg.com/originals/bf/e2/e7/bfe2e760fc30211627cbd79ba68991f2.jpg")
+                                            "Usado 2 años\n\n", name="Conjunto de muebles", owner_id=14, category_id=2, url="https://i.pinimg.com/originals/bf/e2/e7/bfe2e760fc30211627cbd79ba68991f2.jpg")
     product6 = entities.Product(description="Marca Nike\n\n"
                                             "Equipo PSG\n\n"
                                             "Neymar 10\n\n"
                                             "Temporada 2018-2019\n\n "
-                                            "Usada 3 meses\n\n", name="Camiseta de futbol", owner_id=1, category_id=3, url= "https://dexter.vteximg.com.br/arquivos/ids/383218-1000-1000/894432411_1.jpg?v=636669252379930000")
+                                            "Usada 3 meses\n\n", name="Camiseta de futbol", owner_id=14, category_id=3, url= "https://dexter.vteximg.com.br/arquivos/ids/383218-1000-1000/894432411_1.jpg?v=636669252379930000")
     product7 = entities.Product(description="Marca Nike\n\n"
                                             "talla 11\n\n"
                                             "Modelo Mercurial\n\n"
                                             "CR7\n\n"
                                             "Estado 9/10\n\n"
-                                            "Usados 8 meses\n\n", name="Chimpunes", owner_id=1, category_id=3,  url="https://cdn3.volusion.com/goz35.avhz4/v/vspfiles/photos/SM-NI852511-376-2.jpg?v-cache=1485790964")
+                                            "Usados 8 meses\n\n", name="Chimpunes", owner_id=14, category_id=3,  url="https://cdn3.volusion.com/goz35.avhz4/v/vspfiles/photos/SM-NI852511-376-2.jpg?v-cache=1485790964")
     product8 = entities.Product(description="Marca Toyota\n\n"
                                             "Color negro\n\n"
                                             "Mecanico\n\n"
                                             "Radio de fñbrica\n\n"
-                                            "12 000 km\n\n", name="Corolla 2015", owner_id=1, category_id=5, url= "https://http2.mlstatic.com/toyota-corolla-2015-18-xei-cvt-140cv-D_NQ_NP_671539-MLA31675837997_082019-F.jpg")
+                                            "12 000 km\n\n", name="Corolla 2015", owner_id=3, category_id=5, url= "https://http2.mlstatic.com/toyota-corolla-2015-18-xei-cvt-140cv-D_NQ_NP_671539-MLA31675837997_082019-F.jpg")
     product9 = entities.Product(description="Marca Ford\n\n"
                                             "Color Amarillo\n\n"
                                             "Automñtico\n\n"
                                             "Estado 10/10\n\n"
-                                            "10 000 km\n\n", name="Mustang 2018", owner_id=1, category_id=5, url="https://i.blogs.es/0e8bf4/ford-mustang-2018-prueba-motorpasion-1/450_1000.jpg")
+                                            "10 000 km\n\n", name="Mustang 2018", owner_id=2, category_id=5, url="https://i.blogs.es/0e8bf4/ford-mustang-2018-prueba-motorpasion-1/450_1000.jpg")
     product10 = entities.Product(description="Marca Chevrolet\n\n"
                                              "Colo Negro\n\n"
                                              "Automatico\n\n"
@@ -204,12 +204,12 @@ def create_test_products():
                                              "Para cuadernos\n\n"
                                              "Guarda laptop\n\n"
                                              "3 cierres\n\n"
-                                             "Usada 2 meses\n\n", name="Mochila", owner_id=1, category_id=3, url="https://www.ezplaystore.com/7647-large_default/totto-mochila-tablet-y-pc-kriptone-negra-roja.jpg")
+                                             "Usada 2 meses\n\n", name="Mochila", owner_id=2, category_id=3, url="https://www.ezplaystore.com/7647-large_default/totto-mochila-tablet-y-pc-kriptone-negra-roja.jpg")
     product12 = entities.Product(description="Marca Tommy Hilfiger\n\n"
                                              "talla M \n\n"
                                              "Color blanco\n\n"
                                              "Estado 10/10\n\n"
-                                             "Usada 4 meses\n\n", name="Camisa", owner_id=1, category_id=3, url="https://images-na.ssl-images-amazon.com/images/I/51k9hYg%2B-GL._UX569_.jpg")
+                                             "Usada 4 meses\n\n", name="Camisa", owner_id=3, category_id=3, url="https://images-na.ssl-images-amazon.com/images/I/51k9hYg%2B-GL._UX569_.jpg")
     product13 = entities.Product(description="Marca Marathon\n\n"
                                              "Color Crema\n\n"
                                              "Estado 9/10\n\n"
@@ -348,6 +348,45 @@ def create_test_products():
     db_session.commit()
     return "Productos creados!"
 
+
+
+
+@app.route('/products2/<id>', methods = ['PUT'])
+def update_product(id):
+    sessiondb = db.getSession(engine)
+    c =  json.loads(request.data)
+    try:
+        user = sessiondb.query(entities.Product).filter(entities.Product.id == id).first()
+        for key in c.keys():
+            setattr(user, key, c[key])
+        sessiondb.add(user)
+        sessiondb.commit()
+        message = {'message': 'Authorized'}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+        return Response(message, status=200, mimetype='application/json')
+    except Exception:
+        message = {'message': 'Unauthorized'}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+
+        return Response(message, status=401, mimetype='application/json')
+
+
+
+@app.route('/delete_product/<id>', methods = ['DELETE'])
+def delete_product(id):
+    session_db = db.getSession(engine)
+    try:
+        products = session_db.query(entities.Product).filter(entities.Product.id == id)
+        for product in products:
+            session_db.delete(product)
+        session_db.commit()
+        message = {'message': 'Authorized'}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+        return Response(message, status=200, mimetype='application/json')
+    except Exception:
+        message = {'message': 'Unauthorized'}
+        message = json.dumps(message, cls=connector.AlchemyEncoder)
+        return Response(message, status=401, mimetype='application/json')
 
 ##############################################
 #                                            #
@@ -514,6 +553,18 @@ def get_product_by_id(id):
     product = session.query(entities.Product).filter(entities.Product.id == id).one()
     js = json.dumps({'name': product.name, 'description': product.description, 'url':product.url}, cls=connector.AlchemyEncoder)
     return Response(js, status=200, mimetype='application/json')
+
+
+@app.route('/myproducts/<user_id>', methods = ['GET'])
+def get_chats(user_id):
+    sessiondb = db.getSession(engine)
+    data = []
+    users=sessiondb.query(entities.Product).filter(entities.Product.owner_id == user_id)
+    for user in users:
+        data.append(user)
+    return Response(json.dumps({'data': data}, cls=connector.AlchemyEncoder), mimetype='application/json')
+
+
 
 
 ##############################################
