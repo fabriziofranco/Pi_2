@@ -17,6 +17,9 @@
             android:name=".One_Product"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".sendOferta"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".MyOffers"
             android:theme="@style/AppTheme" />
         <activity

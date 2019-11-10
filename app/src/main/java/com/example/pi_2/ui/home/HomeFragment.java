@@ -42,23 +42,29 @@ public class HomeFragment extends Fragment {
     Spinner spinner;
     private View root;
     RecyclerView mRecyclerView;
+    String userId;
 
     RecyclerView.Adapter mAdapter;
     JSONArray data_global;
 
+    public String getUserId(){
+        return userId;
+    }
+
     public void showMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
-    
+
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        userId = getActivity().getIntent().getExtras().get("user_id").toString();
         homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
         root = inflater.inflate(R.layout.fragment_home, container, false);
         mRecyclerView = root.findViewById(R.id.main_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mAdapter = new HomeAdapter(data_global, getActivity());
+        mAdapter = new HomeAdapter(data_global, getActivity(), userId);
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -90,7 +96,7 @@ public class HomeFragment extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
                             data_global = response.getJSONArray("data");
-                            mAdapter = new HomeAdapter(data_global, getActivity());
+                            mAdapter = new HomeAdapter(data_global, getActivity(), userId);
                             mRecyclerView.setAdapter(mAdapter);
                             mAdapter.notifyDataSetChanged();
                         }catch (JSONException e) {

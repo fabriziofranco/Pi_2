@@ -25,10 +25,12 @@ import org.json.JSONObject;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public JSONArray elements;
     private Context context;
+    private String userId;
 
-    public HomeAdapter(JSONArray elements, Context context){
+    public HomeAdapter(JSONArray elements, Context context, String userID){
         this.elements = elements;
         this.context = context;
+        this.userId = userID;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -47,17 +49,22 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @NonNull
     @Override
     public HomeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_view,parent, false);
+
         return new ViewHolder(view);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
         try {
             holder.setIsRecyclable(false);
             JSONObject element = elements.getJSONObject(position);
-            String name = element.getString("name");
+            final String name = element.getString("name");
             final String id = element.getString("id");
+            final String ownerId = element.getString("owner_id");
+            final String user_ID = userId;
             holder.first_line.setText(name);
             Picasso.get().load(element.getString("url")).into(holder.iamgen);
             holder.container.setOnClickListener(new View.OnClickListener(){
@@ -65,6 +72,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
                 public void onClick(View v) {
                     Intent intent = new Intent(context, Producto.class);
                     intent.putExtra("product_id",id);
+                    intent.putExtra("name",name);
+                    intent.putExtra("ownerId", ownerId);
+                    intent.putExtra("userId", user_ID);
                     context.startActivity(intent);
                 }
             });
