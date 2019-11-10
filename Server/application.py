@@ -1,4 +1,4 @@
-from flask import Flask, request, session, Response, redirect
+from flask import Flask, request, session, Response, redirect,jsonify
 from database import connector
 from model import entities
 import json
@@ -349,8 +349,6 @@ def create_test_products():
     return "Productos creados!"
 
 
-
-
 @app.route('/products2/<id>', methods = ['PUT'])
 def update_product(id):
     sessiondb = db.getSession(engine)
@@ -555,11 +553,30 @@ def get_product_by_id(id):
     return Response(js, status=200, mimetype='application/json')
 
 
+def get_nameproduct_by_id(id):
+    session = db.getSession(engine)
+    product = session.query(entities.Product).filter(entities.Product.id == id).one()
+    name=product.name
+    dub= str(name)
+    return dub
+
+
 @app.route('/myproducts/<user_id>', methods = ['GET'])
 def get_chats(user_id):
     sessiondb = db.getSession(engine)
     data = []
     users=sessiondb.query(entities.Product).filter(entities.Product.owner_id == user_id)
+    for user in users:
+        data.append(user)
+    return Response(json.dumps({'data': data}, cls=connector.AlchemyEncoder), mimetype='application/json')
+
+
+
+@app.route('/myoffers/<user_id>', methods = ['GET'])
+def get_offers(user_id):
+    sessiondb = db.getSession(engine)
+    data = []
+    users=sessiondb.query(entities.Transaction).filter(entities.Transaction.user_to_id == user_id)
     for user in users:
         data.append(user)
     return Response(json.dumps({'data': data}, cls=connector.AlchemyEncoder), mimetype='application/json')
@@ -574,16 +591,27 @@ def get_chats(user_id):
 ##############################################
 
 
-@app.route('/create_transaction', methods=['POST', 'GET'])
+@app.route('/create_fake_transaction', methods=['POST', 'GET'])
 def create_transaction():
+    dub=str(get_nameproduct_by_id(4))
     transaction = entities.Transaction(
         user_from_id=1,
-        user_to_id=2,
-        ids_enviados=[1, 2, 4, 5, 7],
-        ids_requeridos=[1, 2, 4, 5, 7]
+        user_to_id=14,
+        ids_enviados=[1, 30, 29],
+        id_requeridos=4,
+        name_requerido=dub
+    )
+
+    transaction2 = entities.Transaction(
+        user_from_id=2,
+        user_to_id=14,
+        ids_enviados=[2, 9, 11],
+        id_requeridos=4,
+        name_requerido=dub
     )
     session = db.getSession(engine)
     session.add(transaction)
+    session.add(transaction2)
     session.commit()
     return 'Created Transaction'
 

@@ -46,6 +46,7 @@ class Transaction(connector.Manager.Base):
     user_from = relationship(User, foreign_keys=[user_from_id])
     user_to = relationship(User, foreign_keys=[user_to_id])
     ids_enviados = Column(PickleType)
-    ids_requeridos = Column(PickleType)
+    id_requeridos = Column(Integer)
+    name_requerido = Column(String(5000))
 
 
