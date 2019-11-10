@@ -61,7 +61,7 @@ public class MyOffersAdapter extends RecyclerView.Adapter<MyOffersAdapter.ViewHo
         try {
             holder.setIsRecyclable(false);
             JSONObject element = elements.getJSONObject(position);
-            String name ="Nueva oferta para  '"+ element.getString("name_requerido")+"'";
+            String name ="Nueva oferta para  ' "+ element.getString("name_requerido")+" '";
             holder.first_line.setText(name);
             holder.container.setOnClickListener(new View.OnClickListener(){
                 @Override
