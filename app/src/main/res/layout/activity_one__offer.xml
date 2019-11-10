@@ -4,6 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#293462"
     tools:context=".One_Offer">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Producto solicitado"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/cycle" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler_solicitado"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="95dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Te ofrecen"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler_ofrecidos"
+        android:layout_width="0dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="288dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_recycler_ofrecidos">
+
+        <Button
+            android:id="@+id/Aceptx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/corners_buttons"
+            android:fontFamily="casual"
+            android:text=" Aceptar "
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="601dp" />
+
+        <Button
+            android:id="@+id/Decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/corners_buttons"
+            android:fontFamily="casual"
+            android:text="Rechazar"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="601dp" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
