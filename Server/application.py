@@ -404,13 +404,19 @@ def update_product(id):
 
 
 
-@app.route('/delete_product/<id>', methods=['DELETE'])
-def delete_product(id):
+@app.route('/delete_product/<xid>', methods=['DELETE'])
+def delete_product(xid):
     session_db = db.getSession(engine)
     try:
-        products = session_db.query(entities.Product).filter(entities.Product.id == id)
+        transactions = session_db.query(entities.Transaction).filter(entities.Transaction.id_requeridos==xid)
+        for ee in transactions:
+            session_db.delete(ee)
+
+        products = session_db.query(entities.Product).filter(entities.Product.id == xid)
         for product in products:
             session_db.delete(product)
+
+
         session_db.commit()
         message = {'message': 'Authorized'}
         message = json.dumps(message, cls=connector.AlchemyEncoder)
