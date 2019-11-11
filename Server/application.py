@@ -766,18 +766,23 @@ def createT():
     c = json.loads(request.data)
     data = []
 
+    temp=""
     variable = c['ids_enviados']
     for x in variable:
         if x != " ":
-            data.append(int(x))
+            temp+=x
+        else:
+            data.append(int(temp))
+            temp=""
+        
 
-
-    dub = str(get_nameproduct_by_id(4))
+    dub = str(get_nameproduct_by_id(c['id_requeridos']))
     transaction = entities.Transaction(
         user_from_id=c["user_from_id"],
         user_to_id=c['user_to_id'],
         id_requeridos=c['id_requeridos'],
-        ids_enviados =data
+        ids_enviados =data,
+        name_requerido=dub
     )
     sessiondb.add(transaction)
     sessiondb.commit()
