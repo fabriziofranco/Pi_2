@@ -111,12 +111,9 @@ public class sendOfertaAdapter extends RecyclerView.Adapter<sendOfertaAdapter.Vi
                                 //TODO
                                 try {
                                     System.out.println("EXITO");
-                                    //Intent intent = new Intent(context, One_Offer.class);
-                                    Activity zz2 = ((Activity) context);
-                                    zz2.finish();
-                                    //String user_id = intent2.getExtras().get("user_id").toString();
-                                    //intent.putExtra("user_id",user_id);
-                                    //context.startActivity(intent);
+                                    Intent intent = new Intent(context, MenuActivity.class);
+                                    intent.putExtra("user_id",userfromID);
+                                    context.startActivity(intent);
 
                                 }
                                 catch (Exception e) {
