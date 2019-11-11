@@ -381,7 +381,7 @@ def create_test_products():
     return "Productos creados!"
 
 
-@app.route('/products2/<id>', methods=['DELETE',])
+@app.route('/products2/<id>', methods=['PUT'])
 def update_product(id):
     sessiondb = db.getSession(engine)
     c = json.loads(request.data)
