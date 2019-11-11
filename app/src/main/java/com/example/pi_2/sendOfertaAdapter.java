@@ -143,13 +143,13 @@ public class sendOfertaAdapter extends RecyclerView.Adapter<sendOfertaAdapter.Vi
             holder.setIsRecyclable(false);
             final JSONObject element = elements.getJSONObject(position);
             String name = element.getString("name");
-
             holder.first_line.setText(name);
             Picasso.get().load(element.getString("url")).into(holder.iamgen);
             holder.container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                         holder.container.setBackgroundColor(0xFFFF00);
+
                     try {
                         final String idProductoPropio = element.getString("id");
                         lista_ids[index] = idProductoPropio;
