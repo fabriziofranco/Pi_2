@@ -83,16 +83,21 @@ public class sendOfertaAdapter extends RecyclerView.Adapter<sendOfertaAdapter.Vi
                 message.put("user_to_id", usertoID);
                 message.put("id_requeridos", productID);
 
-                Map<String, String[]> lista2 = new HashMap<>();
-                lista2.put("ids_enviados", lista_ids);
+                String listalul = "";
+                for(int i = 0; i < lista_ids.length; i++){
+                    if(lista_ids[i]!=null){
+                        listalul = listalul+lista_ids[i];
+                    }else{
+                        break;
+                    }
+                    listalul = listalul+" ";
+                }
+                message.put("ids_enviados", listalul);
+                System.out.println(listalul);
 
                 // 3. Converting the message object to JSON string (jsonify)
                 JSONObject jsonMessage = new JSONObject(message);
-                try {
-                    jsonMessage.accumulate("ids_enviados", lista_ids);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+
 
                 // 4. Sending json message to Server
                 JsonObjectRequest request = new JsonObjectRequest(
