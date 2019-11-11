@@ -774,7 +774,7 @@ def createT():
         else:
             data.append(int(temp))
             temp=""
-        
+
 
     dub = str(get_nameproduct_by_id(c['id_requeridos']))
     transaction = entities.Transaction(
