@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,11 +9,13 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="101dp"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|center"
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="34dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/main_recycler_view_products"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,40 +23,56 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="20dp"
-            android:layout_marginLeft="20dp"
             android:gravity="center"
             android:text="A cambio de..."
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="71dp" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/cycle"></ImageView>
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/cycle"
+            tools:layout_editor_absoluteX="253dp"
+            tools:layout_editor_absoluteY="71dp"></ImageView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_recycler_view_products"
-            android:layout_width="383dp"
-            android:layout_height="358dp"
-            android:layout_marginTop="88dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler_view_products"
+        android:layout_width="0dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
 
     <Button
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="118dp"
         android:background="@drawable/corners_buttons"
-        android:text="Login"
         android:fontFamily="casual"
-        android:textSize="25sp"
+        android:text="Enviar"
         android:textColor="#000"
-        android:textStyle="bold" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_recycler_view_products" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

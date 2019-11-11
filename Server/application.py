@@ -704,10 +704,6 @@ def aceptaroferta(idx):
 
 
 
-
-
-
-
 @app.route('/myoffers/<user_id>', methods=['GET'])
 def get_offers(user_id):
     sessiondb = db.getSession(engine)
