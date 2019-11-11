@@ -1,4 +1,4 @@
-from flask import Flask, request, session, Response, redirect, jsonify
+﻿from flask import Flask, request, session, Response, redirect, jsonify
 from database import connector
 from model import entities
 import json
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 ##############################################
-#                                            #   
+#                                            #
 #              FAKE INFORMATION              #
 #                                            #
 ##############################################
@@ -704,6 +704,10 @@ def aceptaroferta(idx):
 
 
 
+
+
+
+
 @app.route('/myoffers/<user_id>', methods=['GET'])
 def get_offers(user_id):
     sessiondb = db.getSession(engine)
@@ -755,6 +759,31 @@ def get_transactions():
         data.append(t)
     return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
 
+
+@app.route('/createT', methods=['POST'])
+def createT():
+    sessiondb = db.getSession(engine)
+    c = json.loads(request.data)
+    data = []
+
+    variable = c['ids_enviados']
+    for x in variable:
+        if x != " ":
+            data.append(int(x))
+
+
+    dub = str(get_nameproduct_by_id(4))
+    transaction = entities.Transaction(
+        user_from_id=c["user_from_id"],
+        user_to_id=c['user_to_id'],
+        id_requeridos=c['id_requeridos'],
+        ids_enviados =data
+    )
+    sessiondb.add(transaction)
+    sessiondb.commit()
+    message = {'message': 'Authorized'}
+    js = json.dumps(message, cls=connector.AlchemyEncoder)
+    return Response(js, status=200, mimetype='application/json')
 
 ##############################################
 #                                            #
