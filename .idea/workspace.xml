@@ -12,7 +12,6 @@
     <list default="true" id="7618e0bc-b464-4bac-9d20-af20097e20ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/mi_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/Server/mi_db.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/One_Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+            <state relative-caret-position="1275">
+              <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
               <folding>
                 <element signature="e#1078#1079#0" expanded="true" />
                 <element signature="e#1105#1106#0" expanded="true" />
@@ -90,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/MyProducts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="199">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -296,9 +295,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -468,9 +467,9 @@
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4994664" weight="0.049751244" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50213444" side_tool="true" weight="0.50215983" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49733192" weight="0.18358532" />
+      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49733192" visible="true" weight="0.18358532" />
       <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.64140874" visible="true" weight="0.30453563" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.64140874" weight="0.30453563" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49786553" weight="0.50215983" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
@@ -864,6 +863,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/One_Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+          <folding>
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/sendOferta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -926,21 +936,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/One_Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
-          <folding>
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pi_2/MyProducts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="199">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
